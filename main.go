@@ -11,6 +11,6 @@ func main() {
 	for {
 		world.Draw()
 
-		systems.Update()
+		systems.Render()
 	}
 }
