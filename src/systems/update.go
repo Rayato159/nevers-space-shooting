@@ -19,7 +19,7 @@ var clear = map[string]func(){
 	},
 }
 
-func ClearScreen() {
+func Update() {
 	clear, ok := clear[runtime.GOOS]
 	if ok {
 		clear()
