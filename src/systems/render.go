@@ -19,7 +19,7 @@ var clear = map[string]func(){
 	},
 }
 
-func Update() {
+func Render() {
 	clear, ok := clear[runtime.GOOS]
 	if ok {
 		clear()
