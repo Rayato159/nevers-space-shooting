@@ -27,9 +27,9 @@ func main() {
 
 		event := termbox.PollEvent()
 		player.Move(event)
+		player.PlayerConfine()
 
 		time.Sleep(1 / FPS * time.Second)
-
 		systems.Render()
 	}
 }
