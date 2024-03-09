@@ -5,10 +5,10 @@ import (
 	"github.com/nsf/termbox-go"
 )
 
-var bulletPosition *PlayerPosition
+var bulletPosition *world.Vector2D
 
 func PlayerAttack(event termbox.Event) {
-	bulletPosition = &PlayerPosition{X: playerPosition.X, Y: playerPosition.Y - 1}
+	bulletPosition = &world.Vector2D{X: playerPosition.X, Y: playerPosition.Y - 1}
 
 	switch event.Type {
 	case termbox.EventKey:

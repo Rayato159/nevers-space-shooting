@@ -3,10 +3,6 @@ package player
 import "github.com/Rayato159/nevers-space-shooting/src/world"
 
 type (
-	PlayerPosition struct {
-		X, Y int
-	}
-
 	PlayerSprite struct {
 		Sprite rune
 	}
@@ -17,7 +13,7 @@ type (
 )
 
 var (
-	playerPosition = &PlayerPosition{X: 1, Y: world.HEIGHT}
+	playerPosition = &world.Vector2D{X: 1, Y: world.HEIGHT}
 	playerSprite   = &PlayerSprite{Sprite: 'P'}
 	playerHP       = &PlayerHP{HP: 100}
 )

@@ -2,6 +2,10 @@ package world
 
 import "fmt"
 
+type Vector2D struct {
+	X, Y int
+}
+
 const (
 	WIDTH  = 10
 	HEIGHT = 10
