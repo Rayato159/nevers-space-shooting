@@ -1,6 +1,8 @@
 package world
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Vector2D struct {
 	X, Y int
@@ -34,8 +36,8 @@ func Draw() {
 }
 
 func ClearBullet() {
-	for y := 0; y < HEIGHT; y++ {
-		for x := 0; x < WIDTH; x++ {
+	for y := 0; y < HEIGHT+1; y++ {
+		for x := 0; x < WIDTH+1; x++ {
 			if World2D[y][x] == '^' {
 				World2D[y][x] = ' '
 			}

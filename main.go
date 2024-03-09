@@ -12,29 +12,36 @@ import (
 
 const FPS = 10
 
+var event termbox.Event
+
 func main() {
 	world.Setup()
 	player.Setup()
 	enemy.Setup()
 
 	// Keyboard input detection
-	err := termbox.Init()
-	if err != nil {
-		panic(err)
-	}
-	defer termbox.Close()
+	termbox.Init()
+
+	go eventLoopUpdate()
 
 	for {
+		systems.IsExit(event)
+
 		world.Draw()
 		world.ClearBullet()
 
-		event := termbox.PollEvent()
-
-		player.Move(event)
-		player.PlayerAttack(event)
 		player.PlayerConfine()
 
 		time.Sleep(1 / FPS * time.Second)
 		systems.Render()
+	}
+}
+
+func eventLoopUpdate() {
+	for {
+		event = termbox.PollEvent()
+
+		player.Move(event)
+		player.PlayerAttack(event)
 	}
 }

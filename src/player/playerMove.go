@@ -1,9 +1,6 @@
 package player
 
 import (
-	"fmt"
-	"os"
-
 	"github.com/Rayato159/nevers-space-shooting/src/world"
 	"github.com/nsf/termbox-go"
 )
@@ -32,9 +29,6 @@ func Move(event termbox.Event) {
 			world.World2D[playerPosition.Y][playerPosition.X] = ' '
 			playerPosition.X--
 			world.World2D[playerPosition.Y][playerPosition.X] = playerSprite.Sprite
-		case termbox.KeyEsc:
-			fmt.Println("Exiting...")
-			os.Exit(0)
 		}
 	case termbox.EventError:
 		panic(event.Err)
