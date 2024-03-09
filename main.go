@@ -3,6 +3,7 @@ package main
 import (
 	"time"
 
+	"github.com/Rayato159/nevers-space-shooting/src/enemy"
 	"github.com/Rayato159/nevers-space-shooting/src/player"
 	"github.com/Rayato159/nevers-space-shooting/src/systems"
 	"github.com/Rayato159/nevers-space-shooting/src/world"
@@ -14,6 +15,7 @@ const FPS = 10
 func main() {
 	world.Setup()
 	player.Setup()
+	enemy.Setup()
 
 	// Keyboard input detection
 	err := termbox.Init()
