@@ -1,6 +1,10 @@
 package enemy
 
-import "github.com/Rayato159/nevers-space-shooting/src/world"
+import (
+	"fmt"
+
+	"github.com/Rayato159/nevers-space-shooting/src/world"
+)
 
 type (
 	EnemySprite struct {
@@ -20,4 +24,8 @@ var (
 
 func Setup() {
 	world.World2D[enemyPosition.Y][enemyPosition.X] = enemySprite.Sprite
+}
+
+func ShowEnemyHP() {
+	fmt.Printf("Enemy HP: %d\n", enemyHP.HP)
 }

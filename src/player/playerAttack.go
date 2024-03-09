@@ -8,7 +8,7 @@ import (
 var BulletPosition *world.Vector2D
 
 func Attack(event termbox.Event) {
-	BulletPosition = &world.Vector2D{X: playerPosition.X, Y: playerPosition.Y - 1}
+	BulletPosition = &world.Vector2D{X: 0, Y: 0}
 
 	switch event.Type {
 	case termbox.EventKey:
@@ -28,5 +28,6 @@ func bulletFly() {
 	for BulletPosition.Y > 0 {
 		world.World2D[BulletPosition.Y][BulletPosition.X] = '|'
 		BulletPosition.Y--
+		BulletPosition.X = playerPosition.X
 	}
 }

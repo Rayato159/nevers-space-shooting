@@ -27,6 +27,9 @@ func main() {
 	for {
 		systems.IsExit(event)
 
+		enemy.IsDead()
+		enemy.ShowEnemyHP()
+
 		world.Draw()
 		world.ClearBullet()
 
