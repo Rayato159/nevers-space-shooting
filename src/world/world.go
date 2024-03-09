@@ -29,6 +29,16 @@ func Draw() {
 	}
 }
 
+func ClearBullet() {
+	for y := 0; y < HEIGHT; y++ {
+		for x := 0; x < WIDTH; x++ {
+			if World2D[y][x] == '^' {
+				World2D[y][x] = ' '
+			}
+		}
+	}
+}
+
 func setupHorizontalLine(y int) {
 	if y == 0 || y == HEIGHT+2-1 {
 		for x := range WIDTH + 2 {

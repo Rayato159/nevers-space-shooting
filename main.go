@@ -24,9 +24,12 @@ func main() {
 
 	for {
 		world.Draw()
+		world.ClearBullet()
 
 		event := termbox.PollEvent()
+
 		player.Move(event)
+		player.PlayerAttack(event)
 		player.PlayerConfine()
 
 		time.Sleep(1 / FPS * time.Second)
