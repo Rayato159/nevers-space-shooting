@@ -7,7 +7,7 @@ import (
 
 var bulletPosition *world.Vector2D
 
-func PlayerAttack(event termbox.Event) {
+func Attack(event termbox.Event) {
 	bulletPosition = &world.Vector2D{X: playerPosition.X, Y: playerPosition.Y - 1}
 
 	switch event.Type {
@@ -17,20 +17,16 @@ func PlayerAttack(event termbox.Event) {
 			bulletPosition.X = playerPosition.X
 			bulletPosition.Y = playerPosition.Y - 1
 
-			bulletFly('^')
-			bulletConfine()
+			bulletFly()
 		}
 	case termbox.EventError:
 		panic(event.Err)
 	}
 }
 
-func bulletFly(bullet rune) {
-	world.World2D[bulletPosition.Y][bulletPosition.X] = bullet
-	bulletPosition.Y--
-}
-
-func bulletConfine() {
-	bulletPosition.Y = 1
-	world.World2D[0][bulletPosition.X] = 'x'
+func bulletFly() {
+	for bulletPosition.Y > 0 {
+		world.World2D[bulletPosition.Y][bulletPosition.X] = '|'
+		bulletPosition.Y--
+	}
 }

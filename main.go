@@ -42,6 +42,6 @@ func eventLoopUpdate() {
 		event = termbox.PollEvent()
 
 		player.Move(event)
-		player.PlayerAttack(event)
+		player.Attack(event)
 	}
 }

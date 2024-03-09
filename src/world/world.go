@@ -38,7 +38,7 @@ func Draw() {
 func ClearBullet() {
 	for y := 0; y < HEIGHT+1; y++ {
 		for x := 0; x < WIDTH+1; x++ {
-			if World2D[y][x] == '^' {
+			if World2D[y][x] == '|' {
 				World2D[y][x] = ' '
 			}
 		}
