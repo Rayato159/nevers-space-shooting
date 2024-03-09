@@ -1,6 +1,10 @@
 package player
 
-import "github.com/Rayato159/nevers-space-shooting/src/world"
+import (
+	"fmt"
+
+	"github.com/Rayato159/nevers-space-shooting/src/world"
+)
 
 type (
 	PlayerSprite struct {
@@ -20,4 +24,8 @@ var (
 
 func Setup() {
 	world.World2D[playerPosition.Y][playerPosition.X] = playerSprite.Sprite
+}
+
+func ShowPlayerHP() {
+	fmt.Printf("Player HP: %d\n", playerHP.HP)
 }
