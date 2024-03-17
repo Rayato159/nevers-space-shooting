@@ -28,7 +28,9 @@ func main() {
 		systems.IsExit(event)
 
 		enemy.IsDead()
+
 		enemy.ShowEnemyHP()
+		player.ShowPlayerHP()
 
 		world.Draw()
 		world.ClearBullet()
