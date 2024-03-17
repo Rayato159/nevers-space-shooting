@@ -25,8 +25,7 @@ This game can make your CPU work hard. Don't play for too long!
 - Enemy
 - Attacking
 - Reduce Enemy HP
+- Critical Hit Chance
 
 ## Need to Improve
-- Player Dead Logic
-- Enemy Move Logic
 - Enemy Attack Logic
