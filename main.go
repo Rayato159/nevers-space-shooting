@@ -30,7 +30,6 @@ func main() {
 		enemy.IsDead()
 
 		enemy.ShowEnemyHP()
-		player.ShowPlayerHP()
 
 		world.Draw()
 		world.ClearBullet()
