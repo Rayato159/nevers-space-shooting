@@ -13,9 +13,11 @@ type (
 )
 
 var (
-	playerPosition = &world.Vector2D{X: 1, Y: world.HEIGHT}
-	playerSprite   = &PlayerSprite{Sprite: 'P'}
-	playerHP       = &PlayerHP{HP: 100}
+	playerPosition               = &world.Vector2D{X: 1, Y: world.HEIGHT}
+	playerSprite                 = &PlayerSprite{Sprite: 'P'}
+	PlayerDamage         uint    = 25
+	PlayerCriticalChance float64 = 0.3 // Percentage
+	PlayerCriticalFactor uint    = 2   // Factor
 )
 
 func Setup() {
