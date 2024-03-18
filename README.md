@@ -1,7 +1,7 @@
 # Nevers Space Shooting
 This game is an assignment of my backend lead in my current company that I've working for.
 
-The objective of this game is just to move and shoot the Enemy 'E' by press 'Space Bar' to shoot, if the enemy is dead then you win this game.
+The objective of this game is just to move by pressing an 'Arrow' and shoot the Enemy 'E' by press 'Space Bar' to shoot, if the enemy is dead then you win this game.
 
 ![alt text](./screenshots/3-game-screenshot.png "FlowChart")
 
